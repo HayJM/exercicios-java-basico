@@ -5,7 +5,7 @@ public class ContaBancaria {
     private Boolean contaCriada= false;
 
     
-    public void CriarContaBancaria(Double depositoInicial) {
+    public void setCriarContaBancaria(Double depositoInicial) {
         if (depositoInicial <= 500.0) {
             this.chequeEspecial = 50.0;
         } else {
@@ -20,7 +20,7 @@ public class ContaBancaria {
         return saldo;
     }
     
-    public void putDepoitarDinheiro(Double valorDeposito) {
+    public void setDepoitarDinheiro(Double valorDeposito) {
         if (valorDeposito > 0) {
             saldo += valorDeposito;
             System.out.println("Depósito de R$" + valorDeposito + " realizado com sucesso!");
@@ -49,7 +49,7 @@ public class ContaBancaria {
         return limiteChequeEspecialUsado;
     }
     
-    public void putSacarDinheiro(Double valorSaque) {
+    public void setSacarDinheiro(Double valorSaque) {
         if (valorSaque <= 0) {
             System.out.println("Valor de saque inválido.");
             return;
@@ -69,7 +69,7 @@ public class ContaBancaria {
         }
     }
     
-    public void putPagarBoleto(Double valorBoleto) {
+    public void setPagarBoleto(Double valorBoleto) {
         if (valorBoleto <= 0) {
             System.out.println("Valor de boleto inválido.");
             return;

@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class Main {
+public class MainExercicio03 {
     public static void main(String[] args) {
-        Main main = new Main();
+        MainExercicio03 main = new MainExercicio03();
         System.out.println("Resolução do exercício 3");
         System.out.println("==Java e a Arte de Abstração com Classes e Encapsulamento==");
         Scanner scanner = new Scanner(System.in);
@@ -45,7 +45,7 @@ public class Main {
     void menuInterativoContaBancaria(double depositoInicial){
         var ok = true;
         ContaBancaria contaBancaria = new ContaBancaria();
-        contaBancaria.CriarContaBancaria(depositoInicial);
+        contaBancaria.setCriarContaBancaria(depositoInicial);
         Scanner scanner = new Scanner(System.in);
 
         do{
@@ -66,12 +66,12 @@ public class Main {
                 case 2:
                     System.out.print("Digite o valor a ser depositado: R$");
                     double valorDeposito = scanner.nextDouble();
-                    contaBancaria.putDepoitarDinheiro(valorDeposito);
+                    contaBancaria.setDepoitarDinheiro(valorDeposito);
                     break;
                 case 3:
                     System.out.print("Digite o valor a ser sacado: R$");
                     double valorSaque = scanner.nextDouble();
-                    contaBancaria.putSacarDinheiro(valorSaque);
+                    contaBancaria.setSacarDinheiro(valorSaque);
                     break;
                 case 4:
                     System.out.println("Limite do cheque especial: R$" + contaBancaria.getVerificarChequeEspecial());
@@ -82,7 +82,7 @@ public class Main {
                 case 6:
                     System.out.print("Digite o valor do boleto a ser pago: R$");
                     double valorBoleto = scanner.nextDouble();
-                    contaBancaria.putPagarBoleto(valorBoleto);
+                    contaBancaria.setPagarBoleto(valorBoleto);
                     break;
                 case 7:
                     ok = false;
