@@ -5,6 +5,8 @@
 
 Este repositório contém uma coleção completa de exercícios práticos de Java, organizados por tópicos fundamentais da linguagem. Os exercícios foram desenvolvidos como parte do curso "Primeiros Passos Java" da Riachuelo, abrangendo desde conceitos básicos até tópicos avançados como interfaces, lambda e collections.
 
+**exercicios-java-basico** - [GitHub](https://github.com/HayJM/exercicios-java-basico.git)
+
 ## 📋 Índice
 
 - [Estrutura do Projeto](#-estrutura-do-projeto)
