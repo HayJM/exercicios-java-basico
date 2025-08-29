@@ -1,4 +1,17 @@
 public class exe02 {
+    public static void main(String[] args){
+        exe02 ex = new exe02();
+        System.out.println("Exercício 1:");
+        ex.execA();
+        System.out.println("\nExercício 2:");
+        ex.execB();
+        System.out.println("\nExercício 3:");
+        ex.execC();
+        System.out.println("\nExercício 4:");
+        ex.execD();
+
+    }
+
     void execA() {
         var scanner = new java.util.Scanner(System.in);
 
@@ -87,19 +100,6 @@ public class exe02 {
             System.out.println("O número " + num + " é divisível por " + numInicial + ".");
         }
         scanner.close();
-    }
-
-    public static void main(String[] args){
-        exe02 ex = new exe02();
-        System.out.println("Exercício 1:");
-        ex.execA();
-        System.out.println("\nExercício 2:");
-        ex.execB();
-        System.out.println("\nExercício 3:");
-        ex.execC();
-        System.out.println("\nExercício 4:");
-        ex.execD();
-
     }
 
 }

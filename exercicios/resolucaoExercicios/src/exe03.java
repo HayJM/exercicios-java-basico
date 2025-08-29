@@ -1,4 +1,41 @@
 public class exe03 {
+public static void main(String[] args){
+        exe03 ex = new exe03();
+        
+        var scanner = new java.util.Scanner(System.in);
+        int opcao;
+        boolean ok = true;
+        do {
+            System.out.println("Menu de Exercícios:");
+            System.out.println("1. Exercício 1 - Conta Bancária");
+            System.out.println("2. Exercício 2 - Controle de Carro");
+            System.out.println("3. Exercício 3 - Controle de Banho de Petshop");
+            System.out.println("0. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();  
+            switch (opcao) {
+                case 1:
+                    ex.exec01();
+                    break;
+                case 2:
+                    ex.exec02();
+                    break;
+                case 3:
+                    ex.exec03();
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    ok = false;
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+        } while (ok);
+        scanner.close();
+        
+    }
+
+
     void exec01(){
         var saldo = 0.0;
         var chequeEspecial = 0.0;
@@ -420,40 +457,6 @@ public class exe03 {
         } while (ok);
         scanner.close();           
     }
-    public static void main(String[] args){
-        exe03 ex = new exe03();
-        // switch case para chamar os métodos dos exercícios 1 a 3 e 4 para sair
-        var scanner = new java.util.Scanner(System.in);
-        int opcao;
-        boolean ok = true;
-        do {
-            System.out.println("Menu de Exercícios:");
-            System.out.println("1. Exercício 1 - Conta Bancária");
-            System.out.println("2. Exercício 2 - Controle de Carro");
-            System.out.println("3. Exercício 3 - Controle de Banho de Petshop");
-            System.out.println("0. Sair");
-            System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();  
-            switch (opcao) {
-                case 1:
-                    ex.exec01();
-                    break;
-                case 2:
-                    ex.exec02();
-                    break;
-                case 3:
-                    ex.exec03();
-                    break;
-                case 0:
-                    System.out.println("Saindo...");
-                    ok = false;
-                    break;
-                default:
-                    System.out.println("Opção inválida. Tente novamente.");
-            }
-        } while (ok);
-        scanner.close();
-        
-    }
+    
 
 }

@@ -1,4 +1,17 @@
 public class exe01 {
+     
+    public static void main(String[] args) throws Exception {
+        exe01 exe = new exe01();
+        System.out.println("Exercício 1:");
+        exe.execA();
+        System.out.println("\nExercício 2:");
+        exe.execB();
+        System.out.println("\nExercício 3:");
+        exe.execC();
+        System.out.println("\nExercício 4:");
+        exe.execD();
+    }
+
     void execA() {
         var scanner = new java.util.Scanner(System.in);
 
@@ -61,16 +74,5 @@ public class exe01 {
         
         System.out.println("A diferença de idade entre " + nome1 + " e " + nome2 + " é de " + diferencaIdade + " anos.");
         scanner.close();
-    }
-    public static void main(String[] args) throws Exception {
-        exe01 exe = new exe01();
-        System.out.println("Exercício 1:");
-        exe.execA();
-        System.out.println("\nExercício 2:");
-        exe.execB();
-        System.out.println("\nExercício 3:");
-        exe.execC();
-        System.out.println("\nExercício 4:");
-        exe.execD();
     }
 }
