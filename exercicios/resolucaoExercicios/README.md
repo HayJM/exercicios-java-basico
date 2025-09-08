@@ -13,7 +13,8 @@ exercicios-java-basico/
 │   ├── exe03.java         # Módulo 3: Sistemas interativos
 │   ├── ContaBancaria.java # Classe do sistema bancário
 │   ├── SistemaDoCarro.java# Classe do simulador de carro
-│   ├── Pet.java           # Classe do sistema de petshop
+│   ├── Pet.java           # Classe do pet do sistema de petshop
+│   ├── MaquinaDeBanho.java# Classe da máquina de banho do petshop
 │   ├── desafioJava01.java # Desafio: Sistema de descontos
 │   └── desafioJava02.java # Desafio: Organização de estoque
 ├── bin/                   # Classes compiladas (.class)
@@ -28,7 +29,7 @@ O arquivo `Main.java` implementa um sistema completo com menu de seleção para 
 
 - **A)** 🏦 **Conta Bancária** - Sistema bancário completo com POO
 - **B)** 🚗 **Sistema de Controle de Carro** - Simulador realista de veículo  
-- **C)** 🐕 **Sistema de Controle de Banho de PetShop** - *(Em desenvolvimento)*
+- **C)** 🐕 **Sistema de Controle de Banho de PetShop** - Sistema completo de banho de pets
 - **D)** ↩️ **Sair** - Encerrar aplicação
 
 ### 🎯 **Características Técnicas**
@@ -91,10 +92,19 @@ O arquivo `Main.java` implementa um sistema completo com menu de seleção para 
 - 5ª marcha: 75-100 km/h (mín. 95 km/h para subir)
 - 6ª marcha: 95-120 km/h (velocidade máxima)
 
-#### 🐕 **Sistema de PetShop** (`Pet.java`)
-**Status:** Em desenvolvimento
-- Estrutura base criada para sistema de controle de banho
-- Planejamento: controle de recursos, agendamento, limpeza
+#### 🐕 **Sistema de Banho de PetShop** (`MaquinaDeBanho.java`, `Pet.java`)
+**Funcionalidades Completas:**
+- ✅ Controle de máquina de banho: abastecimento de água/shampoo, limpeza, controle de pet
+- ✅ Permite apenas 1 pet por vez, com regras de limpeza obrigatória
+- ✅ Consumo de recursos por banho e por limpeza
+- ✅ Menu interativo para todas as operações (colocar/retirar pet, dar banho, abastecer, limpar, etc.)
+- ✅ Classe `Pet` para representar o animal (nome, espécie, status de limpeza)
+
+**Regras e Estados:**
+- Cada banho consome 10L de água e 2L de shampoo
+- Limpeza consome 3L de água e 1L de shampoo
+- Capacidade máxima: 30L de água, 10L de shampoo
+- Pet retirado sujo obriga limpeza antes de novo uso
 
 ## 🎖️ Desafios Especiais
 
@@ -120,30 +130,32 @@ Processa entrada de múltiplas lojas e consolida estoque:
 - ☕ Java JDK 11 ou superior
 - 📝 VS Code com extensão Java Pack
 
+
 ### **Execução Principal (Recomendada)**
 
 ```bash
 # Navegar para o diretório
 cd /caminho/para/exercicios-java-basico/exercicios/resolucaoExercicios
 
-# Compilar sistema principal
-javac -d bin src/Main.java src/ContaBancaria.java src/SistemaDoCarro.java src/Pet.java
+# Compilar sistema principal e todos os módulos
+javac -d bin src/*.java src/exercicio03/*.java
 
 # Executar sistema principal
-java -cp bin Main
+java -cp bin MainExercicio03
 ```
+
 
 ### **Execução Individual de Exercícios**
 
 ```bash
 # Compilar e executar exercício específico
 javac -d bin src/exe01.java && java -cp bin exe01
-javac -d bin src/exe02.java && java -cp bin exe02  
+javac -d bin src/exe02.java && java -cp bin exe02
 javac -d bin src/exe03.java && java -cp bin exe03
 ```
 
 ### **Execução Via VS Code**
-1. Abrir o arquivo `Main.java` 
+1. Abrir o arquivo `MainExercicio03.java` 
 2. Pressionar `F5` ou clicar em "▶ Run"
 3. Seguir o menu interativo no terminal
 
@@ -161,7 +173,7 @@ javac -d bin src/exe03.java && java -cp bin exe03
 - ✅ **Validação**: Entrada de dados com loops de verificação
 
 ### **🎯 Programação Orientada a Objetos**
-- ✅ **Classes e Objetos**: ContaBancaria, SistemaDoCarro, Pet
+- ✅ **Classes e Objetos**: ContaBancaria, SistemaDoCarro, Pet, MaquinaDeBanho
 - ✅ **Encapsulamento**: Atributos privados, métodos públicos
 - ✅ **Métodos**: getters, setters, métodos de operação
 - ✅ **Estado de Objetos**: Controle de estado entre operações
@@ -219,4 +231,4 @@ Este projeto segue uma progressão pedagógica completa:
 **👨‍💻 Desenvolvido por:** HayJM  
 **🎓 Curso:** Primeiros Passos com Java - Riachuelo  
 **📅 Data:** Agosto 2025  
-**🚀 Status:** Sistema principal completo com POO avançada
+**🚀 Status:** Sistema principal completo com POO avançada e todos os módulos implementados
