@@ -1,3 +1,4 @@
+package exercicio03;
 public class SistemaDoCarro {
     private boolean ligado= false;
     private int velocidade= 0;

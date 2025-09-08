@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+import exercicio03.ContaBancaria;
+import exercicio03.SistemaDoCarro;
+import exercicio03.MaquinaDeBanho;
+
 public class MainExercicio03 {
     public static void main(String[] args) {
         MainExercicio03 main = new MainExercicio03();
@@ -27,7 +31,9 @@ public class MainExercicio03 {
                     break;
                 case "C":
                     System.out.println("Exercício de Sistema de Controle de Banho de PetShop");
+                    main.menuInterativoMaquinaDeBanho();
                     break;
+    
                 case "D":
                     ok = false;
                     System.out.println("Saindo...");
@@ -36,12 +42,68 @@ public class MainExercicio03 {
                     System.out.println("Opção inválida. Tente novamente.");
             }
 
-
-
         }while (ok);
         scanner.close();
 
     }
+    void menuInterativoMaquinaDeBanho() {
+        var ok = true;
+        MaquinaDeBanho maquina = new MaquinaDeBanho();
+        Scanner scanner = new Scanner(System.in);
+
+        do {
+            System.out.println("=== Menu da Máquina de Banho de PetShop ===");
+            System.out.println("1. Colocar pet na máquina");
+            System.out.println("2. Retirar pet da máquina");
+            System.out.println("3. Dar banho no pet");
+            System.out.println("4. Abastecer água");
+            System.out.println("5. Abastecer shampoo");
+            System.out.println("6. Verificar nível de água");
+            System.out.println("7. Verificar nível de shampoo");
+            System.out.println("8. Verificar se tem pet na máquina");
+            System.out.println("9. Limpar máquina");
+            System.out.println("10. Sair");
+            System.out.print("Escolha uma opção: ");
+            int opcao = scanner.nextInt();
+            switch (opcao) {
+                case 1:
+                    maquina.colocarPet();
+                    break;
+                case 2:
+                    maquina.retirarPet();
+                    break;
+                case 3:
+                    maquina.darBanho();
+                    break;
+                case 4:
+                    maquina.abastecerAgua();
+                    break;
+                case 5:
+                    maquina.abastecerShampoo();
+                    break;
+                case 6:
+                    maquina.verificarNivelAgua();
+                    break;
+                case 7:
+                    maquina.verificarNivelShampoo();
+                    break;
+                case 8:
+                    maquina.verificarPetNoBanho();
+                    break;
+                case 9:
+                    maquina.limparMaquina();
+                    break;
+                case 10:
+                    ok = false;
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+        } while (ok);
+        scanner.close();
+    }
+
     void menuInterativoContaBancaria(double depositoInicial){
         var ok = true;
         ContaBancaria contaBancaria = new ContaBancaria();

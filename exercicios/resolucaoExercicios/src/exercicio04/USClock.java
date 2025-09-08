@@ -1,3 +1,4 @@
+package exercicio04;
 public non-sealed class USClock extends Clock{
 
     private String periodIndicator;

@@ -1,3 +1,4 @@
+package exercicio03;
 public class ContaBancaria {
     private Double saldo = 0.0;
     private Double chequeEspecial= 0.0;

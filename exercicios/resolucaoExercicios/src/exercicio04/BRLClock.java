@@ -1,3 +1,5 @@
+package exercicio04;
+
 public non-sealed class BRLClock extends Clock{
     @Override
     public Clock covert(final Clock clock){

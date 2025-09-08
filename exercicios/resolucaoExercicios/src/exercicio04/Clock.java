@@ -1,3 +1,4 @@
+package exercicio04;
 public sealed abstract class Clock permits BRLClock, USClock {
     protected int hour;
     protected int minute;

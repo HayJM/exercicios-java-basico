@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+import exercicio04.BRLClock;
+import exercicio04.Clock;
+import exercicio04.USClock;
+
 public class MainExercicio04 {
     public static void main(String[] args) {
         MainExercicio04 main = new MainExercicio04();
