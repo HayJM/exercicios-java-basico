@@ -43,9 +43,74 @@ public class MainExercicio05 {
         
     }
 
-    void mensagensDeMarketing(){}
+    void mensagensDeMarketing() {
+        System.out.println("\n--- Envio de Mensagens de Marketing ---");
+        System.out.print("Digite a mensagem a ser enviada: ");
+        String mensagem = scanner.nextLine();
+        System.out.println("Escolha o serviço:");
+        System.out.println("1 - SMS");
+        System.out.println("2 - E-mail");
+        System.out.println("3 - Redes Sociais");
+        System.out.println("4 - WhatsApp");
+        System.out.print("Opção: ");
+        int opcao = Integer.parseInt(scanner.nextLine());
 
-    void calculoDeTributos(){}
+        exercicio05.MarketingService service = null;
+        switch (opcao) {
+            case 1:
+                service = msg -> System.out.println("[SMS] Mensagem enviada: " + msg);
+                break;
+            case 2:
+                service = msg -> System.out.println("[E-mail] Mensagem enviada: " + msg);
+                break;
+            case 3:
+                service = msg -> System.out.println("[Redes Sociais] Mensagem enviada: " + msg);
+                break;
+            case 4:
+                service = msg -> System.out.println("[WhatsApp] Mensagem enviada: " + msg);
+                break;
+            default:
+                System.out.println("Serviço inválido!");
+                return;
+        }
+        service.enviarMensagem(mensagem);
+    }
+
+    void calculoDeTributos() {
+        System.out.println("\n--- Cálculo de Tributos de Produtos ---");
+        System.out.println("Escolha o tipo de produto:");
+        System.out.println("1 - Alimentação");
+        System.out.println("2 - Saúde e Bem Estar");
+        System.out.println("3 - Vestuário");
+        System.out.println("4 - Cultura");
+        System.out.print("Opção: ");
+        int tipo = Integer.parseInt(scanner.nextLine());
+        System.out.print("Nome do produto: ");
+        String nome = scanner.nextLine();
+        System.out.print("Preço do produto: R$");
+        double preco = Double.parseDouble(scanner.nextLine());
+
+        exercicio05.Product produto = null;
+        switch (tipo) {
+            case 1:
+                produto = new exercicio05.Alimentacao(nome, preco);
+                break;
+            case 2:
+                produto = new exercicio05.SaudeBemEstar(nome, preco);
+                break;
+            case 3:
+                produto = new exercicio05.Vestuario(nome, preco);
+                break;
+            case 4:
+                produto = new exercicio05.Cultura(nome, preco);
+                break;
+            default:
+                System.out.println("Tipo inválido!");
+                return;
+        }
+        System.out.printf("Produto: %s | Preço: R$%.2f | Imposto: R$%.2f\n",
+                produto.getNome(), produto.getPreco(), produto.calcularImposto());
+    }
 
     void calculoAreaFiguraGeometrica(){
         System.out.println("Escolha a figura geométrica:");
